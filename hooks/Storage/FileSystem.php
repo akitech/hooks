@@ -13,9 +13,8 @@ class FileSystem
 
     public static function getRealPath($filePath){
 
-        $filePath = str_replace("\\" , DIRECTORY_SEPARATOR, $filePath);
         $filePath = str_replace("/" , DIRECTORY_SEPARATOR, $filePath);
-        $filePath = DIRECTORY_SEPARATOR . trim($filePath, DIRECTORY_SEPARATOR); //Making things easier
+        $filePath = rtrim($filePath, DIRECTORY_SEPARATOR);
 
         //If BasePath is not there
         if(strpos(strtolower($filePath),strtolower(BASE_DIR)) === false) {

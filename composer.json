@@ -14,7 +14,7 @@
     "require": {
         "php": ">=5.3",
         "matthiasmullie/minify" : "1.3.x",
-        "pagekit/razr" : "0.9-dev"
+        "pagekit/razr" : "0.9.x-dev"
     },
     "extra": {
       "branch-alias": {
