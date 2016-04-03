@@ -11,7 +11,12 @@
             Hooks is a powerful PHP7 based framework.
         </p>
 
-        <img src='@image("assets/images/photo.jpg")' />
+
+        <img src="assets/images/photo.jpg" />
+        <!--
+         If GD is installed, you can try: [Remove + between @ and image]
+            <img src='@+image("assets/images/photo.jpg")' />
+         -->
 
     </div>
 
