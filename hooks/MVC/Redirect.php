@@ -5,7 +5,7 @@ namespace hooks\MVC;
 
 class Redirect
 {
-    static function to(string $location = null){
+    public static function to(string $location = null){
         if(strpos($location,'http') === false){
             header('Location:'.BASE_URL.$location);
         } else {
@@ -14,7 +14,7 @@ class Redirect
         exit();
     }
 
-    static function trigger(int $num){
+    public static function trigger(int $num){
 
         if(substr(route()->projectURI(), 0 , 5) == "admin")  {
             $errorDirectory = "admin/errors";
