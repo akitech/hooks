@@ -32,7 +32,7 @@ abstract class StatementHelper
             $sql = " WHERE";
             $DBParams = [];
 
-            $accepted_params = array('=','<','>','LIKE','NOT LIKE','BETWEEN','!=','IN');
+            $accepted_params = array('=','<','>','LIKE','NOT LIKE','BETWEEN','!=','IN','NOT IN');
 
             //Case of 1D Naked array with operator
             //Eg : ["name","=","tika"]
@@ -92,7 +92,7 @@ abstract class StatementHelper
 
         $params = [];
 
-        if($operator == "IN" && is_array($value))
+        if(($operator == "IN" || $operator == "NOT IN" ) || is_array($value))
         {
             //Splitting into sets of parameters
             $replacement = [];

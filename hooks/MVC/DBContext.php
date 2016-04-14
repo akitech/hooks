@@ -86,6 +86,11 @@ abstract class DBContext extends DBContextRelational
 
     public function getScalarValue($obj){
 
+
+        if($obj instanceof \DateTime){
+            return $obj->format("Y-m-d H:i:a");
+        }
+
         if(is_object($obj) && property_exists($obj,"contextPrimaryKey")){
             $prop = $obj::$contextPrimaryKey;
             return $obj->$prop;

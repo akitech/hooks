@@ -13,6 +13,7 @@ class FileSystem
 
     public static function getRealPath($filePath){
 
+        $filePath = str_replace("\\" , DIRECTORY_SEPARATOR, $filePath);
         $filePath = str_replace("/" , DIRECTORY_SEPARATOR, $filePath);
         $filePath = rtrim($filePath, DIRECTORY_SEPARATOR);
 
