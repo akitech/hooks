@@ -1,9 +1,9 @@
 {
     "name": "akitech/hooks",
     "description": "Hooks is a Powerful yet Lightweight PHP Framework for rapid development.",
-    "type": "package",
+    "type": "project",
     "require": {
-        "pagekit/razr": "0.9.x-dev",
+        "akitech/hooks-src": "1.0.1.x-dev",
         "php": ">=5.3"
     },
     "autoload": {

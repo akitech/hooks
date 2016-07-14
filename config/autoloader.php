@@ -5,10 +5,6 @@ if(!function_exists("autoloader")){
     function autoloader($class)
     {
 
-        if(strpos($class, "hooks") === 0){
-            $class = "vendor\\akitech\\hooks\\src\\" . substr($class, 6);
-        }
-
         $file = BASE_DIR . DIRECTORY_SEPARATOR . $class . ".php";
         $file = str_replace("/" , DIRECTORY_SEPARATOR, $file);
         $file = str_replace("\\" , DIRECTORY_SEPARATOR, $file);
@@ -16,13 +12,11 @@ if(!function_exists("autoloader")){
 
         if(file_exists($file))
         {
-
              require_once $file;
-             return true;
+             return;
 
         }
-        //return false;
-
+        
         else
         {
             if(ENV_DEVELOPMENT)

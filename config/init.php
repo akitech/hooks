@@ -26,10 +26,10 @@ if(!defined("BASE_DIR")){
 }
 
 //Grabbing constants
-require_once BASE_DIR . '/config/constants.php';
-require_once BASE_DIR . '/config/autoloader.php';
-require_once BASE_DIR.'/config/routes.php';
-require_once BASE_DIR.'/config/helperFunctions.php';
+require_once dirname(__DIR__) . '/config/constants.php';
+require_once dirname(__DIR__) . '/config/autoloader.php';
+require_once dirname(__DIR__).'/config/routes.php';
+require_once dirname(__DIR__).'/config/helperFunctions.php';
 
 
 

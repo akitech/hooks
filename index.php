@@ -24,14 +24,13 @@ ob_start();
     +   config/autoloader.php                                            +
     +   config/routes.php                                                +
     +   config/helperFunctions.php                                       +
-    +   config/class_alias.php                                           +
     +--------------------------------------------------------------------+
 
 */
 
 require_once __DIR__ . '/config/init.php';
-require_once BASE_DIR . '/vendor/autoload.php';
 
+require_once __DIR__  . '/vendor/autoload.php';
 
 /*
     +--------------------------------------------------------------------+
