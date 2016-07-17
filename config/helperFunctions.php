@@ -22,8 +22,8 @@ function view($view = null, $vars = []){
     return new View($view, $vars);
 }
 
-function db($host = DB_HOST, $db = DB_NAME, $user = DB_USER, $pass = DB_PASS) : DB{
-    return new DB($host, $db, $user, $pass);
+function db($dsn = DB_DEFAULT_DSN, $user = DB_DEFAULT_USER, $pass = DB_DEFAULT_PASS) : DB{
+    return new DB($dsn, $user, $pass);
 }
 
 function component(string $component, array $params = []){
